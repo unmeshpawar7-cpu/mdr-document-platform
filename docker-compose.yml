@@ -1,0 +1,71 @@
+# Local stack: SQL Server + Python AI classifier + .NET API.
+#   cp .env.example .env   # then set real secrets
+#   docker compose up --build
+# API: http://localhost:8080/swagger   Classifier: http://localhost:8000/health
+name: mdr-document-platform
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: Developer
+      MSSQL_SA_PASSWORD: ${MSSQL_SA_PASSWORD:?set MSSQL_SA_PASSWORD in .env}
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql-data:/var/opt/mssql
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P \"$${MSSQL_SA_PASSWORD}\" -C -Q 'SELECT 1' -b -o /dev/null || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+
+  ai-classifier:
+    build:
+      context: ./src/ai-classifier
+      dockerfile: ../../docker/ai-classifier.Dockerfile
+    environment:
+      CLASSIFIER_API_KEY: ${CLASSIFIER_API_KEY:?set CLASSIFIER_API_KEY in .env}
+      LLM_PROVIDER: ${LLM_PROVIDER:-offline}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o-mini}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      ANTHROPIC_MODEL: ${ANTHROPIC_MODEL:-claude-sonnet-4-5}
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=2)"]
+      interval: 15s
+      timeout: 3s
+      retries: 5
+      start_period: 10s
+
+  api:
+    build:
+      context: .
+      dockerfile: docker/api.Dockerfile
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+      ai-classifier:
+        condition: service_healthy
+    environment:
+      # Development enables Swagger and seeds the demo users from appsettings.Development.json.
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__MdrDatabase: "Server=sqlserver,1433;Database=MdrDocumentPlatform;User Id=sa;Password=${MSSQL_SA_PASSWORD};TrustServerCertificate=True;Encrypt=True"
+      Database__ApplyMigrationsOnStartup: "true"
+      Jwt__SigningKey: ${JWT_SIGNING_KEY:?set JWT_SIGNING_KEY in .env}
+      Classifier__Enabled: "true"
+      Classifier__BaseUrl: http://ai-classifier:8000
+      Classifier__ApiKey: ${CLASSIFIER_API_KEY}
+      Storage__RootPath: /app/data/uploads
+    ports:
+      - "8080:8080"
+    volumes:
+      - mdr-uploads:/app/data/uploads
+
+volumes:
+  mssql-data:
+  mdr-uploads:
