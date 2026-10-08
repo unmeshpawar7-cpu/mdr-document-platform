@@ -1,0 +1,98 @@
+# MDR classification taxonomy - weighted keyword lists used by the deterministic (offline) scorer.
+# Codes MUST match the reference data seeded by the .NET API (Disciplines / DocumentTypes).
+# Keywords are matched as whole words/phrases after normalisation (lower case, punctuation -> space),
+# so "P&ID" is written as "p id". Title matches count double.
+version: "2026.10"
+
+disciplines:
+  MEC:
+    name: Mechanical
+    default_category: Mechanical equipment
+    keywords: {pump: 3, pumps: 3, blower: 3, blowers: 3, compressor: 3, mechanical: 3, piping: 2, pipework: 2, valve: 1,
+               conveyor: 2, hvac: 3, ducting: 2, crane: 2, mixer: 2, rotating: 2, vibration: 2, npsh: 3, scraper: 2,
+               thickener mechanism: 3, equipment list: 3, isometric: 1, isometrics: 1}
+  ELE:
+    name: Electrical
+    default_category: Power distribution
+    keywords: {electrical: 3, switchgear: 4, cable: 3, cables: 3, single line: 3, transformer: 3, motor control centre: 3,
+               motor control centres: 3, mcc: 2, earthing: 3, lightning: 3, lighting: 3, load list: 3, generator: 3,
+               voltage: 2, kv: 2, variable frequency drives: 2, vfd: 2, ups: 2, substation: 3, cable tray: 2}
+  INS:
+    name: Instrumentation & Control
+    default_category: Control & automation
+    keywords: {instrument: 3, instruments: 3, instrumentation: 2, scada: 4, plc: 3, transmitter: 3, transmitters: 3,
+               flow meter: 3, analyser: 3, analysers: 3, control valve: 3, loop: 2, loops: 2, control system: 3,
+               alarm: 2, trip: 2, control room: 3, calibration: 2, consoles: 2, panels: 1}
+  CIV:
+    name: Civil
+    default_category: Civil works
+    keywords: {civil: 3, drainage: 3, road: 2, roads: 2, earthworks: 3, grading: 3, excavation: 2, stormwater: 3,
+               culvert: 2, paving: 2, compaction: 2, backfill: 2, shoring: 2, outfall: 2, landscaping: 2, access road: 3,
+               site: 1, cross sections: 1}
+  STR:
+    name: Structural
+    default_category: Structures
+    keywords: {structural: 3, steel: 2, concrete: 2, reinforced: 2, reinforcement: 2, foundation: 3, foundations: 3,
+               slab: 2, pipe rack: 3, pipe racks: 3, pipe support: 3, pipe supports: 3, framing: 2, frame: 1,
+               girder: 2, tank walls: 2, fabrication: 1}
+  PRO:
+    name: Process
+    default_category: Process design
+    keywords: {process: 3, p id: 3, piping and instrumentation: 3, dosing: 2, coagulant: 3, coagulation: 3,
+               flocculation: 3, filtration: 2, filter: 1, chlorination: 2, chlorine: 1, clarifier: 1, hydraulic profile: 3,
+               hydraulic grade line: 3, design basis: 2, jar test: 3, line list: 3, valve list: 3, chemical: 1,
+               heat and mass balance: 3, contact tank: 2}
+  HSE:
+    name: Health, Safety & Environment
+    default_category: Safety & environment
+    keywords: {hazop: 5, hazard: 3, safety: 3, fire: 3, gas detection: 3, gas detectors: 3, environmental: 3,
+               emergency: 2, emergency response: 3, risk: 2, health: 2, noise: 1, permit: 1, impact assessment: 3}
+  ARC:
+    name: Architectural
+    default_category: Buildings
+    keywords: {architectural: 4, floor plan: 3, floor plans: 3, elevations: 2, finishes: 3, cladding: 2, doors: 1,
+               windows: 1, room data: 2, gatehouse: 3, administration building: 2}
+
+document_types:
+  DWG:
+    name: Drawing
+    keywords: {drawing: 4, drawings: 4, layout: 3, general arrangement: 4, plan: 2, plans: 2, single line diagram: 3,
+               isometric: 3, isometrics: 3, sections: 2, elevations: 2, cross sections: 3, routing: 1}
+  SPE:
+    name: Specification
+    keywords: {specification: 5, technical specification: 5, requirements: 1}
+  CAL:
+    name: Calculation
+    keywords: {calculation: 5, calculations: 5, sizing: 2, design calculation: 5}
+  DS:
+    name: Datasheet
+    keywords: {datasheet: 5, data sheet: 5, datasheets: 5}
+  REP:
+    name: Report
+    keywords: {report: 5, study: 2, assessment: 2, test report: 5, plan: 1}
+  PID:
+    name: Piping & Instrumentation Diagram
+    keywords: {p id: 6, piping and instrumentation diagram: 6}
+  LST:
+    name: List / Register
+    keywords: {list: 4, register: 4, index: 4, schedule: 3}
+  PRC:
+    name: Procedure
+    keywords: {procedure: 5, method statement: 4, instruction: 2, manual: 2}
+
+categories:
+  Rotating equipment: [pump, pumps, blower, blowers, compressor, mixer, conveyor]
+  Piping: [piping, pipework, isometric, isometrics, line list, valve list]
+  Power distribution: [switchgear, transformer, substation, single line, motor control centre, cable, load list, generator]
+  Control & automation: [scada, plc, instrument, transmitter, flow meter, analyser, control valve, control system, loop]
+  Civil works: [drainage, earthworks, grading, road, stormwater, excavation, outfall]
+  Structures: [foundation, steel, concrete, pipe rack, pipe support, framing]
+  Treatment process: [coagulation, flocculation, filtration, chlorination, dosing, clarifier, jar test]
+  Safety & environment: [hazop, safety, fire, gas detection, environmental, emergency]
+  Buildings: [floor plan, floor plans, finishes, gatehouse, administration building, cladding]
+
+priority:
+  critical: [hazop, safety, fire, gas detection, emergency, chlorine handling, emergency response]
+  high: [p id, piping and instrumentation, single line, design basis, switchgear, hydraulic profile, long lead]
+  type_defaults: {PID: High, SPE: Medium, DS: Medium, CAL: Medium, DWG: Medium, REP: Medium, LST: Low, PRC: Medium}
+  default: Medium

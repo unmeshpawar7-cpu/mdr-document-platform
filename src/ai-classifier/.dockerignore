@@ -1,0 +1,11 @@
+**/bin
+**/obj
+**/.venv
+**/__pycache__
+**/.pytest_cache
+**/.ruff_cache
+**/.coverage
+.git
+.env
+tests
+samples/generated
