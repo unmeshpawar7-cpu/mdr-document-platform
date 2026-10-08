@@ -1,0 +1,50 @@
+# .NET build output
+bin/
+obj/
+*.user
+*.suo
+.vs/
+.vscode/
+.idea/
+*.swp
+TestResults/
+coverage/
+*.coverage
+*.cobertura.xml
+coverage.xml
+coverage.json
+
+# Local data (anchored paths only - folders such as src/Mdr.Domain/Uploads are source code)
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+/data/
+/src/Mdr.Api/data/
+
+# Secrets
+.env
+*.env
+!.env.example
+appsettings.*.local.json
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated load-test files
+samples/generated/

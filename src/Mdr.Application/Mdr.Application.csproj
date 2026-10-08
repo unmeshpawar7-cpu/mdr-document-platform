@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Mdr.Application</RootNamespace>
+    <AssemblyName>Mdr.Application</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Used only for Microsoft.Extensions.* abstractions (logging, options, DI, Identity hasher contract).
+         No HTTP/MVC types are referenced from this project. -->
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Mdr.Domain\Mdr.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
