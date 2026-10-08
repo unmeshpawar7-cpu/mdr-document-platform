@@ -9,8 +9,8 @@ public interface IUploadRepository
 
     Task<bool> ExistsWithChecksumAsync(Guid projectId, string checksumSha256, CancellationToken cancellationToken);
 
-    /// <summary>Ids of uploads in the given states, oldest first (used for crash recovery).</summary>
-    Task<IReadOnlyList<Guid>> GetIdsByStatusAsync(IReadOnlyCollection<UploadStatus> statuses, CancellationToken cancellationToken);
+    /// <summary>Ids of uploads still <c>Queued</c> or <c>Processing</c>, oldest first (used for crash recovery).</summary>
+    Task<IReadOnlyList<Guid>> GetPendingIdsAsync(CancellationToken cancellationToken);
 
     void Add(MdrUpload upload);
 }
