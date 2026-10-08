@@ -185,18 +185,91 @@ erDiagram
     DocumentTypes ||--o{ DocumentTypeGateSets : allows
     GateSets ||--o{ DocumentTypeGateSets : allowed_for
 
-    Projects { uniqueidentifier Id PK  varchar Code UK  nvarchar Name  nvarchar Client  varchar Status  uniqueidentifier Version }
-    WbsElements { uniqueidentifier Id PK  uniqueidentifier ProjectId FK  varchar Code  int Level  varchar ParentCode }
-    MdrUploads { uniqueidentifier Id PK  uniqueidentifier ProjectId FK  varchar ChecksumSha256  varchar Status  int TotalRows  int ValidRows  int InvalidRows  int DuplicateRows  int InsertedRows  int ProcessingAttempts  datetime2 StartedAtUtc  datetime2 FinishedAtUtc }
-    MdrDocuments { uniqueidentifier Id PK  uniqueidentifier ProjectId FK  uniqueidentifier UploadId FK  varchar DocumentNumber  nvarchar Title  int Quantity  varchar Revision  date PlannedDate  varchar AiSuggestedDisciplineCode  float AiConfidence  bit NeedsReview }
-    ValidationIssues { bigint Id PK  uniqueidentifier UploadId FK  int RowNumber  varchar Severity  varchar Code  nvarchar Message }
-    Disciplines { int Id PK  varchar Code UK }
-    DocumentTypes { int Id PK  varchar Code UK }
-    Offices { int Id PK  varchar Code UK }
-    GateSets { int Id PK  varchar Code UK  varchar Stages }
-    DocumentTypeGateSets { int DocumentTypeId PK  int GateSetId PK }
-    AuditLogs { bigint Id PK  datetime2 OccurredAtUtc  nvarchar UserName  varchar Action  varchar EntityType  varchar EntityId }
-    Users { uniqueidentifier Id PK  nvarchar UserName UK  nvarchar PasswordHash  varchar Roles }
+    Projects {
+        uniqueidentifier Id PK
+        varchar Code UK
+        nvarchar Name
+        nvarchar Client
+        varchar Status
+        uniqueidentifier Version
+    }
+    WbsElements {
+        uniqueidentifier Id PK
+        uniqueidentifier ProjectId FK
+        varchar Code
+        int Level
+        varchar ParentCode
+    }
+    MdrUploads {
+        uniqueidentifier Id PK
+        uniqueidentifier ProjectId FK
+        varchar ChecksumSha256
+        varchar Status
+        int TotalRows
+        int ValidRows
+        int InvalidRows
+        int DuplicateRows
+        int InsertedRows
+        int ProcessingAttempts
+        datetime2 StartedAtUtc
+        datetime2 FinishedAtUtc
+    }
+    MdrDocuments {
+        uniqueidentifier Id PK
+        uniqueidentifier ProjectId FK
+        uniqueidentifier UploadId FK
+        varchar DocumentNumber
+        nvarchar Title
+        int Quantity
+        varchar Revision
+        date PlannedDate
+        varchar AiSuggestedDisciplineCode
+        float AiConfidence
+        bit NeedsReview
+    }
+    ValidationIssues {
+        bigint Id PK
+        uniqueidentifier UploadId FK
+        int RowNumber
+        varchar Severity
+        varchar Code
+        nvarchar Message
+    }
+    Disciplines {
+        int Id PK
+        varchar Code UK
+    }
+    DocumentTypes {
+        int Id PK
+        varchar Code UK
+    }
+    Offices {
+        int Id PK
+        varchar Code UK
+    }
+    GateSets {
+        int Id PK
+        varchar Code UK
+        varchar Stages
+    }
+    DocumentTypeGateSets {
+        int DocumentTypeId PK
+        int GateSetId PK
+    }
+    AuditLogs {
+        bigint Id PK
+        datetime2 OccurredAtUtc
+        nvarchar UserName
+        varchar Action
+        varchar EntityType
+        varchar EntityId
+    }
+    Users {
+        uniqueidentifier Id PK
+        nvarchar UserName UK
+        nvarchar PasswordHash
+        varchar Roles
+    }
 ```
 
 Unique `(ProjectId, DocumentNumber)` and `(ProjectId, ChecksumSha256)`; filtered indexes for pending uploads and
