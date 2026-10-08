@@ -1,0 +1,28 @@
+DocumentNumber,Title,Description,Discipline,DocumentType,WBS,GateSet,Office,Quantity,Revision,PlannedDate,Status
+NWP-001-PUN-MEC-DWG-0101,Sludge thickener mechanism general arrangement,"Bridge, drive and scraper arrangement for the sludge thickener",MEC,DWG,3.1,STD,PUN,2,A,2027-06-10,Planned
+NWP-001-HOU-ELE-SPE-0102,Standby diesel generator specification,Specification for 1 MVA standby diesel generator and fuel system,ELE,SPE,4.1,STD,HOU,1,A,2027-06-20,Planned
+NWP-001-PUN-PRO-REP-0103,,Process description report,PRO,REP,3.1,STD,PUN,1,A,2027-06-25,Planned
+NWP-001-LDN-CIV-DWG-0104,"Overall plant layout drawing including every building, road, pipe rack and utility corridor including every building, road, pipe rack and utility corridor including every building, road, pipe rack and utility corridor including every building, road, pipe rack and utility corridor ",Plant layout,CIV,DWG,5.1,STD,LDN,1,A,2027-07-01,Planned
+NWP-001-PUN-MEC-CAL-0105,Pump NPSH calculation,Net positive suction head check for intake pumps,MEC,CAL,2.1,STD,PUN,two,A,2027-07-05,Planned
+NWP-001-HOU-INS-LST-0106,Alarm and trip schedule,Alarm and trip set points for the filtration area,INS,LST,4.2,STD,HOU,1,A,15/03/2027,Planned
+NWP-001-PUN-CIV-DWG-0108,Site grading plan,Grading, drainage and levelling,CIV,DWG,5.1,STD,PUN,1,A,2027-07-10,Planned
+NWP001-PUN-MEC-DWG-12,Filter gallery piping isometrics,Isometric drawings for filter gallery piping,MEC,DWG,3.2,STD,PUN,10,A,2027-07-15,Planned
+SRF-002-PUN-MEC-DWG-0110,Clear water tank piping layout,Piping layout for the clear water tank,MEC,DWG,3.3,STD,PUN,1,A,2027-07-20,Planned
+NWP-001-HOU-MEC-DWG-0111,Chemical building HVAC layout,HVAC ducting layout for the chemical building,MEC,DWG,5.2,STD,PUN,1,A,2027-07-25,Planned
+NWP-001-HOU-MEC-DWG-0112,Cable tray routing drawing,Cable tray and ladder routing between MCC and field,ELE,DWG,4.1,STD,HOU,1,A,2027-08-01,Planned
+NWP-001-LDN-STR-DWG-0113,Pipe rack structural specification,Design and fabrication requirements for pipe racks,STR,SPE,5.2,STD,LDN,1,A,2027-08-05,Planned
+NWP-001-PUN-MEC-DWG-0101,Sludge thickener mechanism sections,Sections through the sludge thickener,MEC,DWG,3.1,STD,PUN,1,A,2027-08-10,Planned
+NWP-001-PUN-MEC-DWG-0001,Raw water intake pump station general arrangement,Re-issued row that already exists in the register,MEC,DWG,2.1,STD,PUN,3,B,2027-08-15,Planned
+NWP-001-PUN-XYZ-DWG-0116,Landscaping plan,Planting and landscaping around the administration building,XYZ,DWG,5.1,STD,PUN,1,A,2027-08-20,Planned
+NWP-001-PUN-MEC-MAN-0117,Pump operation manual,Operation and maintenance manual for intake pumps,MEC,MAN,2.1,STD,PUN,1,A,2027-08-25,Planned
+NWP-001-SYD-CIV-DWG-0118,Access road cross sections,Typical cross sections of the plant access road,CIV,DWG,5.1,STD,SYD,1,A,2027-09-01,Planned
+NWP-001-PUN-PRO-CAL-0119,Hydraulic profile calculation,Plant hydraulic grade line calculation,PRO,CAL,3.1,G9,PUN,1,A,2027-09-05,Planned
+NWP-001-PUN-PRO-PID-0120,P&ID filter backwash system,Piping and instrumentation diagram for backwash pumps and blowers,PRO,PID,3.2,PROC,PUN,1,A,2027-09-10,Planned
+NWP-001-LDN-CIV-DWG-0121,Effluent outfall drawing,Outfall structure to the river,CIV,DWG,9.9,STD,LDN,1,A,2027-09-15,Planned
+NWP-001-HOU-ELE-DWG-0122,Lighting layout process area,Area lighting layout for process buildings,ELE,DWG,4.1,STD,HOU,0,A,2027-09-20,Planned
+NWP-001-HOU-INS-SPE-0123,Analyser specification,Specification for turbidity and chlorine analysers,INS,SPE,4.2,STD,HOU,1,A-1,2027-09-25,Planned
+NWP-001-PUN-HSE-REP-0124,Construction safety plan,Construction phase health and safety plan,HSE,REP,1.1,REG,PUN,1,A,2020-01-15,Issued
+NWP-001-LDN-ARC-DWG-0125,Gatehouse elevations,Elevations and sections of the gatehouse,ARC,DWG,5.2,STD,LDN,1,A,2027-10-01,Approved
+NWP-001-PUN-PRO-LST-0126,Valve list,List of manual and actuated valves,PRO,LST,3.2,STD,PUN,1,A,2027-10-05,In Progress
+NWP-001-LDN-STR-CAL-0127,Pipe support design calculation,Design of pipe supports in the filter gallery,STR,CAL,3.2,STD,LDN,1,A,2027-10-10,Planned
+NWP-001-HOU-INS-DS-0128,Pressure transmitter datasheet,,INS,DS,4.2,PROC,HOU,1,A,,

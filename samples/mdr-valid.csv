@@ -1,0 +1,41 @@
+DocumentNumber,Title,Description,Discipline,DocumentType,WBS,GateSet,Office,Quantity,Revision,PlannedDate,Status
+NWP-001-PUN-MEC-DWG-0001,Raw water intake pump station general arrangement,"General arrangement of vertical turbine intake pumps, suction bays and pipework",MEC,DWG,2.1,STD,PUN,3,A,2027-02-15,Planned
+NWP-001-PUN-MEC-DS-0002,Raw water intake pump datasheet,Process and mechanical datasheet for vertical turbine pumps P-101A/B/C,MEC,DS,2.1,PROC,PUN,1,A,2027-01-20,InProgress
+NWP-001-PUN-PRO-PID-0003,P&ID raw water intake and screening,"Piping and instrumentation diagram for intake, screens and pump suction",PRO,PID,2.1,STD,PUN,2,A,2027-01-30,Planned
+NWP-001-PUN-PRO-CAL-0004,Coagulant dosing system sizing calculation,Dosing pump capacity and chemical storage volume calculation,PRO,CAL,3.1,STD,PUN,1,0,2027-02-10,Planned
+NWP-001-HOU-ELE-SPE-0005,Medium voltage switchgear specification,Technical specification for 11 kV switchgear and protection relays,ELE,SPE,4.1,STD,HOU,1,A,2027-03-01,Planned
+NWP-001-HOU-ELE-DWG-0006,Single line diagram main substation,Electrical single line diagram for 11 kV / 415 V main substation,ELE,DWG,4.1,STD,HOU,2,A,2027-02-20,InProgress
+NWP-001-HOU-ELE-CAL-0007,Cable sizing and voltage drop calculation,"Power cable sizing, short circuit and voltage drop calculation",ELE,CAL,4.1,STD,HOU,1,A,2027-03-15,Planned
+NWP-001-HOU-INS-SPE-0008,Control system and SCADA specification,"Specification for PLC, SCADA and instrument network architecture",INS,SPE,4.2,STD,HOU,1,A,2027-03-10,Planned
+NWP-001-HOU-INS-LST-0009,Instrument index,"Register of field instruments, tags, ranges and loop numbers",INS,LST,4.2,STD,HOU,1,A,2027-02-28,InProgress
+NWP-001-HOU-INS-DS-0010,Electromagnetic flow meter datasheet,Instrument datasheet for treated water flow transmitters,INS,DS,4.2,PROC,HOU,1,A,2027-04-01,Planned
+NWP-001-LDN-CIV-DWG-0011,Site grading and drainage plan,"Earthworks grading, stormwater drainage and road layout",CIV,DWG,5.1,STD,LDN,4,A,2027-01-25,Planned
+NWP-001-LDN-CIV-CAL-0012,Stormwater drainage calculation,"Rainfall intensity, runoff and pipe capacity calculation",CIV,CAL,5.1,STD,LDN,1,0,2027-02-05,Planned
+NWP-001-LDN-STR-DWG-0013,Filter building reinforced concrete foundation drawing,Foundation layout and reinforcement details for filter building,STR,DWG,5.2,STD,LDN,3,A,2027-03-20,Planned
+NWP-001-LDN-STR-CAL-0014,Clarifier tank structural design calculation,Reinforced concrete design of clarifier walls and base slab,STR,CAL,5.2,STD,LDN,1,A,2027-03-05,InProgress
+NWP-001-LDN-ARC-DWG-0015,Administration building floor plans,"Architectural floor plans, elevations and room data sheets",ARC,DWG,5.2,STD,LDN,2,A,2027-04-10,Planned
+NWP-001-PUN-HSE-REP-0016,HAZOP study report,Hazard and operability study of chlorination and chemical dosing systems,HSE,REP,1.1,REG,PUN,1,A,2027-05-01,Planned
+NWP-001-PUN-HSE-PRC-0017,Chlorine handling safety procedure,"Safe handling, storage and emergency response for chlorine drums",HSE,PRC,1.1,REG,PUN,1,A,2027-04-15,Planned
+NWP-001-PUN-PRO-REP-0018,Filtration process design basis report,Design basis for rapid gravity filters including filtration rates,PRO,REP,3.2,STD,PUN,1,A,2027-01-15,Issued
+NWP-001-PUN-MEC-SPE-0019,Filter backwash blower specification,Specification for positive displacement backwash air blowers,MEC,SPE,3.2,PROC,PUN,1,A,2027-03-25,Planned
+NWP-001-PUN-MEC-DWG-0020,Rapid gravity filter piping layout,"Piping layout of filter inlet, outlet and backwash headers",MEC,DWG,3.2,STD,PUN,5,A,2027-04-05,Planned
+NWP-001-HOU-ELE-LST-0021,Electrical load list,Connected and maximum demand load list for all motor control centres,ELE,LST,4.1,STD,HOU,1,A,2027-02-12,InProgress
+NWP-001-HOU-INS-DWG-0022,Control room layout drawing,"Layout of operator consoles, control panels and SCADA servers",INS,DWG,4.2,STD,HOU,1,A,2027-05-10,Planned
+NWP-001-PUN-PRO-PID-0023,P&ID chlorination system,Piping and instrumentation diagram for chlorine dosing and contact tank,PRO,PID,3.3,STD,PUN,2,A,2027-02-25,Planned
+NWP-001-PUN-PRO-DS-0024,Chlorine dosing pump datasheet,Process datasheet for chlorine solution dosing pumps,PRO,DS,3.3,PROC,PUN,1,A,2027-03-30,Planned
+NWP-001-LDN-CIV-SPE-0025,Earthworks and roads specification,"Specification for excavation, backfill, compaction and paving",CIV,SPE,5.1,STD,LDN,1,A,2027-02-01,Planned
+NWP-001-LDN-STR-SPE-0026,Structural steel specification,"Specification for steel fabrication, erection and protective coatings",STR,SPE,5.2,STD,LDN,1,A,2027-03-12,Planned
+NWP-001-PUN-MEC-LST-0027,Mechanical equipment list,List of rotating and static equipment with duty and tag numbers,MEC,LST,2.2,PROC,PUN,1,A,2027-01-28,InProgress
+NWP-001-PUN-MEC-CAL-0028,Screen headloss and conveyor sizing calculation,Hydraulic headloss through bar screens and screenings conveyor capacity,MEC,CAL,2.2,STD,PUN,1,A,2027-02-18,Planned
+NWP-001-HOU-ELE-SPE-0029,Low voltage motor control centre specification,Specification for 415 V motor control centres and variable frequency drives,ELE,SPE,4.1,PROC,HOU,1,A,2027-04-20,Planned
+NWP-001-HOU-INS-CAL-0030,Control valve sizing calculation,Cv sizing of filter outlet and flow control valves,INS,CAL,4.2,INFO,HOU,1,A,2027-04-25,Planned
+NWP-001-LDN-ARC-SPE-0031,Architectural finishes specification,"Specification for doors, windows, cladding and internal finishes",ARC,SPE,5.2,STD,LDN,1,A,2027-05-15,Planned
+NWP-001-PUN-HSE-REP-0032,Environmental impact assessment report,"Assessment of construction noise, dust and effluent discharge impacts",HSE,REP,1.1,INFO,PUN,1,A,2027-01-10,Issued
+NWP-001-PUN-HSE-LST-0033,Fire and gas detection register,"Register of fire detectors, gas detectors and alarm zones",HSE,LST,1.1,STD,PUN,1,A,2027-05-20,Planned
+NWP-001-PUN-PRO-REP-0034,Jar test and coagulation optimisation report,Laboratory jar test results and coagulant dose recommendations,PRO,REP,3.1,STD,PUN,1,A,2027-02-08,InProgress
+NWP-001-LDN-CIV-DWG-0035,Intake structure excavation and shoring drawing,"Temporary works, excavation and sheet pile shoring at the intake",CIV,DWG,2.1,STD,LDN,2,A,2027-03-08,Planned
+NWP-001-LDN-STR-DWG-0036,Screen house steel framing drawing,Steel portal frame and crane girder arrangement,STR,DWG,2.2,INFO,LDN,2,A,2027-04-12,Planned
+NWP-001-HOU-ELE-DWG-0037,Earthing and lightning protection layout,Earthing grid and lightning protection layout for the site,ELE,DWG,4.1,INFO,HOU,1,A,2027-05-05,Planned
+NWP-001-HOU-INS-PRC-0038,Instrument loop check procedure,"Procedure for loop checks, calibration and SCADA point-to-point testing",INS,PRC,4.2,STD,HOU,1,A,2027-06-01,Planned
+NWP-001-PUN-MEC-REP-0039,Pump vibration acceptance test report,Factory acceptance test results for intake pump vibration,MEC,REP,1.1,STD,PUN,1,A,2027-06-15,Planned
+NWP-001-PUN-PRO-LST-0040,Chemical storage line list,Line list for chemical dosing and storage pipework,PRO,LST,3.3,STD,PUN,1,A,2027-05-25,Planned
