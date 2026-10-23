@@ -23,17 +23,17 @@ public static class MdrColumns
 
     public static IReadOnlyList<MdrColumn> All { get; } = new List<MdrColumn>
     {
-        new(DocumentNumber, true, 50, new[] { "Document Number", "Document No", "Doc No", "Doc Number", "DocNo" }),
+        new(DocumentNumber, true, 50, new[] { "Document No", "Doc No", "Doc Number" }),
         new(Title, true, 250, new[] { "Document Title" }),
         new(Description, false, 2000, new[] { "Desc", "Document Description" }),
         new(Discipline, true, 10, new[] { "Discipline Code" }),
-        new(DocumentType, true, 10, new[] { "Document Type", "Doc Type", "Type", "Document Type Code" }),
+        new(DocumentType, true, 10, new[] { "Doc Type", "Type", "Document Type Code" }),
         new(Wbs, true, 30, new[] { "WBS Code", "WBS Element" }),
-        new(GateSet, true, 10, new[] { "Gate Set", "Gates" }),
+        new(GateSet, true, 10, new[] { "Gates" }),
         new(Office, true, 10, new[] { "Office Code", "Originating Office" }),
         new(Quantity, true, 10, new[] { "Qty" }),
         new(Revision, true, 5, new[] { "Rev" }),
-        new(PlannedDate, false, 20, new[] { "Planned Date", "Planned Issue Date", "Target Date" }),
+        new(PlannedDate, false, 20, new[] { "Planned Issue Date", "Target Date" }),
         new(Status, false, 20, new[] { "Document Status" }),
     };
 
